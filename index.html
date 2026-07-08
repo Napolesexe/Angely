@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Angely perdón</title>
+
+    <!-- Fuentes de Google: Great Vibes para títulos elegantes, Cormorant Garamond para texto -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400&family=Great+Vibes&display=swap"
+        rel="stylesheet">
+
+    <!-- Hoja de estilos -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Elementos ambientales de fondo -->
+    <div id="particles-js"></div>
+    <div id="falling-flowers"></div>
+
+    <!-- Botón de Volumen -->
+    <button id="mute-btn" class="control-btn" title="Activar/Desactivar Música">🔊</button>
+
+    <!-- Detalles extras en la pantalla -->
+    <div id="floating-heart">
+        <svg viewBox="0 0 24 24" width="35" height="35" xmlns="http://www.w3.org/2000/svg">
+            <defs>
+                <linearGradient id="heartGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+                    <stop offset="0%" stop-color="#ffb7c5" />
+                    <stop offset="100%" stop-color="#e9738d" />
+                </linearGradient>
+            </defs>
+            <path fill="url(#heartGrad)"
+                d="M12 21.35l-1.45-1.32C5.4 15.36 2 12.28 2 8.5 2 5.42 4.42 3 7.5 3c1.74 0 3.41.81 4.5 2.09C13.09 3.81 14.76 3 16.5 3 19.58 3 22 5.42 22 8.5c0 3.78-3.4 6.86-8.55 11.54L12 21.35z" />
+        </svg>
+    </div>
+
+    <div id="rotating-phrase-container">
+        <span id="rotating-phrase">Eres mi pensamiento favorito...</span>
+    </div>
+
+    <div id="counter-container">
+        <p>Nuestro tiempo juntos:</p>
+        <div id="time-counter">Cargando...</div>
+    </div>
+
+    <!-- Elemento de audio requerido -->
+    <audio id="audio" src="audio.mp3" loop></audio>
+
+    <!-- Pantalla de inicio -->
+    <div id="intro-screen">
+        <h1 class="intro-title" id="intro-title-text">
+            <!-- Título dinámico -->
+        </h1>
+        <button id="start-btn" class="gold-btn">
+            <!-- Botón dinámico -->
+        </button>
+    </div>
+
+    <!-- Contenedor principal del libro interactivo -->
+    <div id="book-wrapper">
+        <div class="book" id="book-container">
+            <!-- Las páginas se inyectan dinámicamente desde script.js -->
+        </div>
+    </div>
+
+    <!-- Librería tsParticles para los brillos dorados -->
+    <script src="https://cdn.jsdelivr.net/npm/tsparticles@2.12.0/tsparticles.bundle.min.js"></script>
+
+    <!-- Archivo de Textos (Cargarlo primero) -->
+    <script src="textos.js"></script>
+    <!-- Lógica de la aplicación -->
+    <script src="script.js"></script>
+</body>
+
+</html>
